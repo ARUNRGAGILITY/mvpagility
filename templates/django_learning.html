@@ -1,0 +1,99 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %}Home{% endblock title %} 
+{% block content %}
+{% include 'navbar.html' %}
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      {% if user.is_authenticated %}
+      <h1 class="display-4 fw-normal">Django Learning for {{user.username}}</h1>
+      {% else %}
+      <h1 class="display-4 fw-normal">Hello Guest!</h1>
+      {% endif %}
+      <p class="fs-5 text-muted">Learn about Django with concepts, practices and building tools &amp; techniques. </p>
+    </div>
+  <main>
+    <div class="row row-cols-1 row-cols-md-4 mb-3 text-center">
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-white bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Intro &amp; Setup</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title">Start</h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>What is Django?</li>
+              <li>Why Django?</li>
+              <li>Benefits &amp; End-to-End Flow </li>
+              <li>Learn to Setup Dev Env</li>
+            </ul>
+            <a href="{% url 'login' %}" class="w-100 btn btn-lg btn-primary" role="button">Start here!</a>           
+          </div>
+        </div>
+      </div>
+     
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Beginner</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title"> Level 1</h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Create Small Projects</li>
+              <li>Static Websites</li>
+              <li>DB Websites</li>
+              <li>Dynamic Website</li>
+            </ul>
+            <a href="{% url 'login' %}" class="w-100 btn btn-lg btn-outline-primary" role="button">Stay Focused</a> 
+            
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Intermediate</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title">Level 2</h5>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Build Medium-size Projects</li>
+              <li>Learn to Deploy</li>
+              <li>Create Production Environment</li>
+              <li>Go Live!</li>
+            </ul>
+            <a href="{% url 'login' %}" class="w-100 btn btn-lg btn-outline-primary" role="button">Build &amp; Deploy</a> 
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Advanced</h4>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title pricing-card-title">Level 3</h5>
+           <ul class="list-unstyled mt-3 mb-4">
+              <li>Deliver Solutions</li>
+              <li>Utilize Patterns</li>
+              <li>Apply Architecture</li>
+              <li>Work with Teams</li>
+            </ul>
+            <a href="{% url 'login' %}" class="w-100 btn btn-lg btn-outline-primary" role="button">Achieve Value</a> 
+          </div>
+        </div>
+      </div>
+      
+
+   
+  </main>
+<div class="row text-center">
+      <div class="col-12 col-md">    
+<br><br>    
+        <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+      </div>
+</div>
+</div>
+
+{% endblock content %}

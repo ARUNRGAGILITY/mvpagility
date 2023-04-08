@@ -4,7 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static 
 from django.conf.urls.static import serve as mediaserve 
 urlpatterns = [
-    path('', include("app_web.urls")),
+    path('', include('app_users.urls')),
     path('admin/', admin.site.urls),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

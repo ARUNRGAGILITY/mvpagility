@@ -1,0 +1,17 @@
+{% include 'navbar.html' %}
+<div class="container-fluid p-0 m-0">
+  <main>
+    <b>Welcome to MVP Version History</b>
+    <ul>
+        <li>Users Management: Ability to Login, Logout, Profile and Authenticated Pages</li>
+    </ul>
+    <hr>
+    {% if user.is_authenticated %}
+      {% include 'USER_DASHBOARD.html' %}
+    {% else%}
+      &nbsp;
+    {% endif %}
+      
+  </main>
+</div>
+</div>
