@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def web_home(request):
+
+    context = {
+        'page': 'web_home',
+    }
+    return render(request, 'app_web/web_home.html', context)
